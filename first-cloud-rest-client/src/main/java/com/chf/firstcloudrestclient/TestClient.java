@@ -25,6 +25,7 @@ public class TestClient {
 // 获取响应
             HttpResponse response = httpclient.execute(httpget);
 
+
             // 根据 响应解析出字符串
             System.out.println(EntityUtils.toString(response.getEntity()));
         }
