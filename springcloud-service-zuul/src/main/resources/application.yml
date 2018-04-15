@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-zuul
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8769
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-invoker
+    api-b:
+          path: /api-b/**
+          serviceId: service-invoker
